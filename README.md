@@ -1,26 +1,27 @@
 2k252-FLAPPY_BIRD-MAIN
 ├── .github/
 │   └── workflows/
-│       └── publish.yml          ← GitHub Action (ya incluido)
-│
-├── video/
-│   └── demo.mp4                 ← Video de gameplay (max 2 min)
-│
-├── gallery/
-│   └── cover.png                ← Imagen de portada (720x1080)
-│
-├── screenshots/
-│   ├── screenshot1.png          
-│   ├── screenshot2.png
-│   └── screenshot3.png
-│
-├── bin/
-│   └── JuegoProyecto.exe        ← Ejecutable del juego
-│
+│       └── publish.yml
+├── .vscode/        ← Carpeta local de VSCode (ignorada por .gitignore)
+│   └── tasks.json
 ├── assets/
-│   ├── textures/
-│   ├── sounds/
-│   └── ...                      ← Todos los recursos necesarios
-│
-├── README.md                    ← Este archivo (edítalo con tu proyecto)
+│   ├── arial.TTF
+│   ├── arialbd.ttf
+│   ├── background.png
+│   ├── flappy.exe
+│   ├── openal32.dll
+│   ├── sfml-audio-2.dll
+│   ├── sfml-graphics-2.dll
+│   ├── sfml-window-2.dll
+│   └── screenshots/              
+├── bin/
+│   └── flappy.exe                 
+├── gallery/
+│   └── cover.png                  
+├── screenshots/
+│   ├── screenshot1.PNG
+│   ├── screenshot2.PNG
+│   └── screenshot3.PNG
+├── README.md                      
 └── .gitignore
+
