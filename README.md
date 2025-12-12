@@ -1,3 +1,45 @@
+Controles
+---------
+
+- Espacio: Saltar / Iniciar / Reiniciar tras perder.
+- ESC: Pausar el juego.
+- Enter: Reanudar desde pausa.
+
+Requisitos
+---------
+
+- Windows 10/11 (o equivalente) para las versiones binarias incluidas.
+- SFML (bibliotecas dinámicas .dll incluidas en `assets/`).
+- `cl.exe` (MSVC) o `g++` (MinGW) si deseas compilar desde el código fuente.
+
+Cómo compilar
+-------------
+
+Con MSVC (Developer Command Prompt):
+
+```powershell
+cl.exe /Zi /EHsc /nologo /Fe"bin\\flappy.exe" assets\flappy.cpp /I assets
+```
+
+Con MSBuild (Visual Studio):
+
+```powershell
+msbuild assets\flappy.vcxproj /p:Configuration=Release
+```
+
+Con MinGW (g++):
+
+```powershell
+g++ -std=c++17 -O2 -Iassets -o bin/flappy.exe assets/flappy.cpp -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+```
+
+Solución de problemas
+---------------------
+
+- Si faltan archivos de audio (`musica_fondo.ogg`, `game_over.wav`, `point_score.wav`) el juego seguirá arrancando pero mostrará advertencias y no reproducirá sonido.
+- Si la fuente `arial.ttf` no está disponible en `assets/`, el juego intentará cargarla desde `C:\Windows\Fonts`.
+- Asegúrate de ejecutar `bin/flappy.exe` desde la carpeta raíz del repositorio (o copiar las dependencias `*.dll` a la misma carpeta del ejecutable).
+
 
 2k252-FLAPPY_BIRD-MAIN
 ======================
@@ -39,7 +81,7 @@ Estructura principal del repositorio (lista exacta del contenido):
 ├── bin/
 │   └── flappy.exe                 ← Ejecutable precompilado
 ├── gallery/
-│   └── cover.png                  ← Imagen de portada (720x1080)
+│   └── cover.png                  
 ├── screenshots/
 │   ├── screenshot1.PNG
 │   ├── screenshot2.PNG
@@ -75,11 +117,6 @@ msbuild assets\flappy.vcxproj /p:Configuration=Release
 Nota sobre VSCode
 -----------------
 
-- La carpeta `.vscode/` contiene configuraciones locales y no está pensada para
-	estar en el repositorio remoto. Asegúrate de no subir tus ajustes locales.
+- En realese encontraras todos los recursos para jugar el juego sin problemas
 
-Contribuciones
---------------
-
-Si quieres mejorar el juego, abre un 'issue' o un 'pull request' con tus cambios.
 
